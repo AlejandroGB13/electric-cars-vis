@@ -21,45 +21,201 @@
 
 class: center, middle
 
-# Visualización de datos (UOC)
-      Vehículos eléctricos en Washington
-
----
-
-# Agenda
-
-1. Introduction
-2. Survey of tools and needs
-3. Looking for automation
-4. Creating an accessible and secure workflow
-
----
-
-      It's possible to embed images.
-![](./images/0_100_dist.png)
+# Vehículos eléctricos en Washington
+Alejandro González Barberá - Visualización de datos (UOC)
+.footnote[Link del [repositorio](https://github.com/AlejandroGB13/electric-cars-vis)]
       
 ---
 
-# Introduction
-
-      It's possible to embed images.
-![](https://cdn.shopify.com/s/files/1/0051/4802/products/mona-1_large.jpg?v=1511308586)
-
----
-
-# Survey of tools and needs
+# Indice
+1. Presentación dataset
+2. Análisis general
+3. Análisis específico
 
 ---
+      
+layout: false
+.left-column[
+  ## 1. Presentación del dataset
+]
+.right-column[
+  En un inicio, se mostraban los vehículos híbridos y totalmente eléctricos registrados por el Departamento de Matriculación del Estado de Washington. Pero el conjunto de datos ha sufrido modificaciones:
 
-# Looking for automation
+- Se han añadido nuevas características mediante web scrapping.
 
----
+- Se han eliminado los vehículos PHEV.
 
-# Creating an accessible and secure workflow
+- Se han eliminado las filas que contenían valores vacíos.
+      
+- Dimensión final: 87685 filas y 24 columnas.
+
+Problemas encontrados:  
+      
+- No había datos disponibles de los vehículos PHEV.
+
+- La herramienta Flourish no era lo bastante fluida.
+] 
+      
+---      
+.left-column[
+  ## 1. Presentación del dataset
+  ## 1.1 Variables finales
+]
+.right-column[
+Las variables finales de nuestro conjunto de datos son:
+
+-	VIN. Primeros diez caracteres del número de identificación del vehículo.
+-	County. Condado donde está registrado el propietario.
+-	City. Ciudad donde está registrado el propietario.
+-	State. Estado donde está registrado el propietario.
+-	Postal Code. Código postal donde está registrado el propietario.
+-	Model Year. Año del modelo del vehículo.
+-	Make. Marca del vehículo.
+-	Model. Modelo del vehículo
+-	Electric Vehicle Type. Tipo del vehículo (BEVs o PHEVs)
+-	Clean Alternative Fuel Vehicle (CAFV) Eligibility. Si es una alternativa limpia según el requerimiento de House Bill 2042.
+-	Electric range. Distancia que puede conducir en modo eléctrico.
+-	Base MSRP. Precio mínimo del vehículo.
+-	Legislative District. Distrito de Washington donde reside el propietario.
+-	DOL Vehicle ID. Identificador único del vehículo.
+-	Vehicle Location. Localización del centro donde se ha registrado.
+-	Electric Utility. Zona de servicio de distribución de electricidad que sirve la dirección del vehículo registrado.
+-	2020 Census Tract. Combinación del estado, condado y código censal.
+- 0-100(s). Tiempo que tarda en acelerar de 0 a 100 km/h.
+- VMax (km/h). Velocidad máxima que alcanza el vehículo.
+- Range (km). Rango de distancia del vehículo.
+- Batteries capacity (kW/h). Capacidad de las baterías.      
+- Effiency (Wh/km). Eficiencia del vehículo.
+- Price (€)           
+      
+]
       
 ---
+template: inverse
 
+## Análisis general
+---
+      
+layout: false
+.left-column[
+  ## Evolución histórica
+]
+.right-column[      
+  Evolución de ventas. 
+![](./images/evolución.png)
+    Evolución del nicho. 
+![](./images/evolución_nicho.png)    
+]     
+      
+---    
+      
+layout: false
+.left-column[
+  ## Evolución histórica
+  ## Mapa    
+]
+.right-column[      
+  ¿Dónde se han realizado los registros? 
+![](./images/lat_lon.png)   
+]     
+      
+--- 
+      
+layout: false
+.left-column[
+  ## Evolución histórica
+  ## Mapa
+  ## Top marcas / modelos    
+]
+.right-column[      
+  Top 5 marcas. 
+![](./images/worst_best_brands.png)     
+    Top 5 modelos 
+![](./images/worst_best_models.png)    
+]     
+      
+---
+      
+layout: false
+.left-column[
+  ## Evolución histórica
+  ## Mapa
+  ## Top marcas / modelos   
+  ## 0 - 100       
+]
+.right-column[      
+  Distribución 0 - 100 (s). 
+![](./images/0_100_dist.png)     
+  Top 5 modelos. 
+![](./images/0_100_top.png)    
+]     
+      
+---
+      
+layout: false
+.left-column[
+  ## Evolución histórica
+  ## Mapa
+  ## Top marcas / modelos   
+  ## 0 - 100   
+  ## Rango     
+]
+.right-column[      
+  Distribución Rango (km). 
+![](./images/rango_dist.png)     
+  Top 5 modelos. 
+![](./images/rango_top.png)    
+]     
+      
+---   
+      
+layout: false
+.left-column[
+  ## Evolución histórica
+  ## Mapa
+  ## Top marcas / modelos   
+  ## 0 - 100   
+  ## Rango 
+  ## Precio vs rango    
+]
+.right-column[      
+  Distribución Precio vs Rango. 
+![](./images/price_range.png)        
+]     
+      
+--- 
+template: inverse
+
+## Tesla
+---
+                  
+layout: false
+.left-column[
+  ## Introducción 
+]
+.right-column[      
+  Modelos. 
+![](./images/tesla_models.png)
+  Evolución de ventas. 
+![](./images/evolución_tesla.png)    
+]      
+--- 
+layout: false
+.left-column[
+  ## Introducción 
+  ## Características    
+]
+.right-column[      
+  Precio vs eficiencia. 
+![](./images/tesla_precio_eficiencia.png)
+  Precio vs rango. 
+![](./images/tesla_rango_precio.png)    
+]      
+--- 
+      
 # Final
+      
+---
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">

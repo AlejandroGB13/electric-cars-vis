@@ -1,5 +1,5 @@
 # Visualización dataset coches eléctricos
-Práctica de la asignatura de Visualización de Datos del Máster de Ciencia de Datos (UOC) realizada por Alejandro González Barberá.
+Práctica de la asignatura de Visualización de Datos del Máster de Ciencia de Datos (UOC) realizada por Alejandro González Barberá. Link de la página de inicio de la presentación: [inicio](https://alejandrogb13.github.io/electric-cars-vis/#1)
 ## Descripción
 La práctica se basa en realizar un story telling sobre un conjunto de datos de forma que se pueda contextualizar y entender de que se trata este mismo.
 
